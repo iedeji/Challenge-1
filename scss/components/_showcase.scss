@@ -1,0 +1,130 @@
+@import'../custom';
+
+body{
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.showcase{
+    width: 75%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.main_heading{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.main_paragraph{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+.statParagraph{
+    color:  hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+h2{
+    font-family: 'Lexend Deca', sans-serif;   
+    font-weight: 400;
+}
+
+.imageDesktop{
+    background-repeat: no-repeat;
+    filter: grayscale(100%) 
+    brightness(70%) 
+    sepia(50%) 
+    hue-rotate(-100deg)
+    saturate(500%)
+    contrast(1);
+}
+
+.imageMobile{
+    display: none;
+    filter: grayscale(100%) 
+    brightness(70%) 
+    sepia(50%) 
+    hue-rotate(-100deg)
+    saturate(500%)
+    contrast(1);
+}
+
+@media (max-width: 1440px) {
+    .imageMobile{
+        display: none;
+        display: block;
+    }
+
+    .main_paragraph{
+        line-height: 1.5;
+        padding: 0 4rem 0 0;
+    }
+}
+
+@media (max-width: 375px) {
+    body{
+        font-size: 10px;
+        height: 100vh;
+    }
+
+    h1,h2{
+        font-size: medium;
+    }
+
+    h1{
+        width: 83%;
+        margin: 0 auto;
+        font-size: 22px; 
+    }
+
+    .main_paragraph{
+        padding: 0;
+        width: 83%;
+        margin: 0 auto 1.5rem;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .imageMobile{
+        height: 150px;
+        width: 400px;
+        background-position: center;
+    }
+
+    .showcase{
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 320px) {
+    body{
+        font-size: 10px;
+        height: 100vh;
+    }
+
+    h1,h2{
+        font-size: medium;
+    }
+
+    .imageMobile{
+        height: 150px;
+        width: 400px;
+        background-position: center;
+    }
+
+    .showcase{
+        margin: auto;
+    }
+}
